@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nice Clock</title>
+<meta name="keywords" content="black beat, free website template, html, css, free css template" />
+<meta name="description" content="Black Beat is a free HTML CSS website template from Ftemplate.ru" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+var timer1;
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+function getRandom(n)
+{
+	return Math.round(n*Math.random())
+}
+function getColor()
+{
+	var col1 = getRandom(255);
+	var col2 = getRandom(255);
+	var col3 = getRandom(255);
+	var resultColor = "rgb("+col1+","+col2+","+col3+")";
+	return resultColor;
+}
+
+function democlearInterval()
+{
+	window.clearInterval(timer1);
+	timer1 = null;
+}	
+function timeX()
+{
+	if (!timer1)
+	timer1 = window.setInterval("timeStatus()", 1000);
+}
+function timeStatus()
+{
+	var idSpan = document.getElementById("clock");
+	var d1 = new Date()	
+	idSpan.innerHTML = d1.toLocaleTimeString();							
+	idSpan.style.color = getColor();
+				
+}
+timeX();	
+</script>
+</head>
+<body>
+
+<div id="templatemo_container">
+
+	<div id="templatemo_menu">
+   		<ul>
+            <li><a href="#" class="current fast">Home</a></li>
+            <li><a href="list2.html" target="_parent">JS</a></li>
+            <li><a href="list2.html" target="_parent">CSS</a></li>
+            <li><a href="list2.html" target="_parent">HTML</a></li>
+            <li><a href="list2.html">JAVA?</a></li>
+            <li><a href="list2.html">One more</a></li>
+        </ul>
+    
+    </div> <!-- end of menu -->
+    
+    <div id="templatemo_banner">
+    
+    	<div id="site_title">
+            <h1>
+            <a href="#">
+            	<img src="images/templatemo_logo.png" alt="logo" />
+	            <span>I can write here</span></a>
+            </h1>
+        </div>
+        
+        <p>
+        	And here too! Woohoo!   </p>
+    
+  </div> <!-- end of banner -->
+    
+    <div id="templatemo_content">
+
+        <div id="main_column">
+                
+                    <div class="section_w560">
+                        <h2><span>Introducing </span>Black Beat</h2>
+                        
+                    <img class="image_wrapper fl_image transition-scale" src="images/templatemo_image_04.jpg" alt="image" />
+                       
+                        <p>This  CSS template is provided by <a href="list2.html" target="_parent">Ftemplate.ru</a> for free of charge. Feel free to download, edit and apply this template for your personal or commercial websites. Credit goes to <a href="list2.html">Free Photos</a> for photos.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam vitae ipsum vulputate varius vitae semper nunc. Quisque eget elit quis augue pharetra feugiat. Suspendisse turpis arcu, dignissim ac laoreet.</p>
+                        
+                    <div class="cleaner"></div>
+                    </div>
+                    
+                    <div class="cleaner_h50"></div>
+                    
+    	<div class="section_w560">
+                    
+                      <h2><span>Web Design</span> Services</h2>
+                        <!----> 
+                         <img class="image_wrapper fr_image transition-scale" src="images/templatemo_image_01.jpg" alt="image" />              
+                       
+                        <p>Suspendisse feugiat, augue ac tincidunt vestibulum, ligula orci tincidunt arcu, quis scelerisque ante magna quis urna. Ut quis est congue dui porttitor porta. Suspendisse eu erat at nunc luctus rhoncus ut ut purus. Duis mollis dignissim fringilla. </p>
+                        <p>In hac habitasse platea dictumst. Nullam orci ante, tempor ac blandit eget, tristique non neque. Pellentesque eu leo tortor. Mauris et lectus eget elit sodales mattis ac id ligula. Quisque fermentum malesuada felis at suscipit. </p>
+          <div class="cleaner_h20" align="center"><h2>The time is: </h2></div>
+					<br><!--<div class="button bottom_02"><a href="javascript: timeX()">Switch on clock</a></div>
+					<br><div class="button bottom_02"><a href="javascript: democlearInterval()">Switch off clock</a></div>-->
+					<div id="clock" class="clock transition-scale" align="center"<!-- clock been here-->
+                    </div> 
+                        
+    	   
+                    </div>
+                    
+                    <div class="cleaner"></div>
+                </div> <!-- end of main column -->
+                
+                <div id="side_column">
+                
+                    <div class="side_column_box">
+                    	<div class="bottom"></div>
+                        
+                        <h2><span>Latest</span> Updates</h2>
+                        
+                        <div class="content">
+                        
+                            <div class="news_section">
+                                <a href="list2.html"><img class="image_wrapper" src="images/templatemo_image_02.jpg" alt="image" style="opacity:0.45;filter:alpha(opacity=45)" onmouseover="this.style.opacity=1;this.filters.alpha.opacity=100" onmouseout="this.style.opacity=0.5;this.filters.alpha.opacity=50" /></a>
+                                <h3>Etiam tempus tellus eget </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et ipsum sem, ut lobortis dui.  <a href="#">Read more...</a></p>
+                            </div>
+                            
+                            <div class="news_section">
+                                <a href="list2.html"><img class="image_wrapper" src="images/templatemo_image_03.jpg" alt="image" style="opacity:0.45;filter:alpha(opacity=45)" onmouseover="this.style.opacity=1;this.filters.alpha.opacity=100" onmouseout="this.style.opacity=0.5;this.filters.alpha.opacity=50"/></a>
+                                <h3>Nam quis aliquet quam</h3>
+                                <p>Sed pharetra neque vel mauris auctor ornare. Maecenas urna lorem, consectetur eget consectetur id. <a href="#">Read more...</a></p>
+                            </div>
+                            
+                            <div class="button bottom_02"><a href="#">View All</a></div>   
+
+						</div>
+                        
+                    </div>
+                    
+                    <div class="cleaner_h20"></div>
+                    
+                    <div class="side_column_box">
+                    	<div class="bottom"></div>
+                    
+                        <h2>Newsletter</h2>
+                        
+                        <div class="content">
+                            
+                            <form action="#" method="get">
+                                <input type="text" value="Enter your email address..." name="q" size="10" class="inputfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />        
+                                <input type="submit" name="Subscribe" value="Subscribe" alt="Subscribe" class="submitbutton" title="Search" />
+                            </form>
+                            
+                            <div class="cleaner"></div>
+                            
+						</div>
+                    </div>
+                
+                </div> <!-- end of side column -->
+    
+        <div class="cleaner"></div>
+    
+	</div> <!-- end of content -->
+    
+    <div id="templatemo_footer">
+
+        <ul class="footer_menu">
+			<li><a href="list2.html">Home</a></li>            
+            <li><a href="list2.html">Flash</a></li>
+            <li><a href="list2.html">CSS</a></li>
+            <li><a href="list2.html">Gallery</a></li>
+			<li><a href="list2.html">About</a></li>
+            <li class="last_menu"><a href="list2.html">Contact</a></li>
+        </ul>
+    
+        Copyright © 2048 <a href="#">Your Company Name</a> | 
+        Designed by <a href="http://www.Ftemplate.ru" target="_parent">Free CSS Templates</a> | 
+        Validate <a href="http://validator.w3.org/check?uri=referer">XHTML</a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+        
+    </div> <!-- end of footer -->
+
+</div> <!-- end of container -->
+
+</body>
+</html>
